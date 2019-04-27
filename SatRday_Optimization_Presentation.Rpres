@@ -84,7 +84,6 @@ How to approach in R - build a matrix
 ```{r}
 require(lpSolveAPI)
 
-
 lprec <- make.lp(3, 4)
 ```
 
@@ -98,6 +97,16 @@ set.column(lprec, 2, 78.26, indices = 1)
 set.column(lprec, 3, c(11.31, 0.08), indices = 2:3)
 set.column(lprec, 4, c(2.9, 0.9), indices = c(1, 3))
 ```
+
+
+Elements of Optimization
+========================================================
+
+Objective Function
+
+Decision Variables
+
+Constraints
 
 
 Solving an Integer Problem - Setup Matrix
@@ -142,14 +151,8 @@ Solving an Integer Problem - Set Decision Variables
 ## set constraint type
 set.type(test1, c(1:20), "integer")
 ## name the variables - this isn't necessary but is done for readability here
-dimnames(test1) <- list(c("order1demand", "order2demand", "order3demand", "order4demand",
-                          "capacityplant1", "capacityplant2", "capacityplant3", "capacityplant4", 
-                          "capacityplant5"),
-                        c("plant1order1", "plant1order2", "plant1order3", "plant1order4",
-                          "plant2order1", "plant2order2", "plant2order3", "plant2order4",
-                          "plant3order1", "plant3order2", "plant3order3", "plant3order4",
-                          "plant4order1", "plant4order2", "plant4order3", "plant4order4",
-                          "plant5order1", "plant5order2", "plant5order3", "plant5order4"))
+dimnames(test1) <- list(c("order1demand", "order2demand", "order3demand", "order4demand","capacityplant1", "capacityplant2", "capacityplant3","capacityplant4", "capacityplant5"), c("plant1order1", "plant1order2", "plant1order3", "plant1order4","plant2order1", "plant2order2", "plant2order3", "plant2order4", "plant3order1", "plant3order2", "plant3order3", "plant3order4","plant4order1", "plant4order2", "plant4order3", "plant4order4",
+"plant5order1", "plant5order2", "plant5order3", "plant5order4"))
 ```
 
 
@@ -188,6 +191,16 @@ print(results1)
 ```
 
 
+Shiny can be a frontend
+========================================================
+![alt text](Shiny1.jpg)
+
+
+Shiny can be a frontend
+========================================================
+![alt text](ShinyOptimization.jpg)
+
+
 Suggested Packages and Resources
 ========================================================
 
@@ -202,22 +215,12 @@ https://github.com/BillSeliger/SatRdayOptimization
 https://github.com/BillSeliger/NUAnalytics
 
 
-Shiny can be a frontend
-========================================================
-![alt text](Shiny1.jpg)
-
-
-Shiny can be a frontend
-========================================================
-![alt text](ShinyOptimization.jpg)
-
-
-Open Source optimizers
+Open Source & Commercial optimizers
 ========================================================
 ![alt text](NEOSserver.jpg)
 
 
-THank you!
+Thank you!
 ========================================================
 
 Q & A
