@@ -1,0 +1,33 @@
+*<meta creator='lp_solve v5.5'>
+*<meta rows=3>
+*<meta columns=4>
+*<meta equalities=0>
+*<meta integers=2>
+*<meta origsense='MIN'>
+*
+NAME                  
+ROWS
+ N  R0      
+ G  THISROW 
+ L  THATROW 
+ G  LASTROW 
+COLUMNS
+    COLONE    R0        1.0000000000   THATROW   0.2400000000
+    COLONE    LASTROW   12.680000000
+    MARK0000  'MARKER'                 'INTORG'
+    COLTWO    R0        3.0000000000   THISROW   78.260000000
+    COLTHREE  R0        6.2400000000   THATROW   11.310000000
+    COLTHREE  LASTROW   0.0800000000
+    MARK0001  'MARKER'                 'INTEND'
+    COLFOUR   R0        0.1000000000   THISROW   2.9000000000
+    COLFOUR   LASTROW   0.9000000000
+RHS
+    RHS       THISROW   92.300000000   THATROW   14.800000000
+    RHS       LASTROW   4.0000000000
+BOUNDS
+ LO BND       COLONE    28.600000000
+ LO BND       COLTWO    0.0000000000
+ BV BND       COLTHREE
+ LO BND       COLFOUR   18.000000000
+ UP BND       COLFOUR   48.980000000
+ENDATA
